@@ -240,6 +240,7 @@ for (const fileName in output.contracts) {
 
     if (options.bin) {
       writeFile(contractFileName + '.bin', output.contracts[fileName][contractName].evm.bytecode.object);
+      writeFile(contractFileName + '.bin-runtime', output.contracts[fileName][contractName].evm.deployedBytecode.object);
     }
 
     if (options.abi) {
